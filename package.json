@@ -1,0 +1,32 @@
+{
+	"name": "typedarray.prototype.slice",
+	"version": "0.0.0",
+	"description": "ES spec-compliant shim for TypedArray.prototype.slice",
+	"main": "index.js",
+	"exports": {
+		".": "./index.js",
+		"./package.json": "./package.json"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/es-shims/TypedArray.prototype.slice.git"
+	},
+	"keywords": [
+		"javascript",
+		"ecmascript",
+		"polyfill",
+		"shim",
+		"es-shim API",
+		"typed array",
+		"slice"
+	],
+	"author": "Jordan Harband <ljharb@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/es-shims/TypedArray.prototype.slice/issues"
+	},
+	"homepage": "https://github.com/es-shims/TypedArray.prototype.slice#readme"
+}
