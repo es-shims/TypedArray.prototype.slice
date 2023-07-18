@@ -23,13 +23,53 @@ if (typeof Uint8Array === 'function' && !Uint8Array.prototype.slice && new Uint8
 		$Uint32Array: callBind(new Uint32Array(0).slice),
 		__proto__: null
 	};
+	var dispatch = function dispatchSlice(fn, arr, args) {
+		if (args.length < 2) {
+			return fn(arr, args.length > 0 ? args[0] : 0);
+		}
+		return fn(arr, args[0], args[1]);
+	};
+	// eslint-disable-next-line no-unused-vars
 	ownSlice = function slice(start, end) {
 		var fn = map['$' + $strSlice($toString(this), 8, -1)];
-		/* eslint no-invalid-this: 0 */
-		if (arguments.length < 2) {
-			return fn(this, arguments.length > 0 ? start : 0);
+		if (!fn) {
+			/* eslint max-depth: 0 */
+			try {
+				return dispatch(map.$Float32Array, this, arguments);
+			} catch (e) {
+				try {
+					return dispatch(map.$Float64Array, this, arguments);
+				} catch (e1) {
+					try {
+						return dispatch(map.$Int8Array, this, arguments);
+					} catch (e2) {
+						try {
+							return dispatch(map.$Uint8Array, this, arguments);
+						} catch (e3) {
+							try {
+								return dispatch(map.$Uint8ClampedArray, this, arguments);
+							} catch (e4) {
+								try {
+									return dispatch(map.$Int16Array, this, arguments);
+								} catch (e5) {
+									try {
+										return dispatch(map.$Uint16Array, this, arguments);
+									} catch (e6) {
+										try {
+											return dispatch(map.$Int32Array, this, arguments);
+										} catch (e7) {
+											return dispatch(map.$Uint32Array, this, arguments);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
-		return fn(this, start, end);
+		/* eslint no-invalid-this: 0 */
+		return dispatch(fn, this, arguments);
 	};
 }
 
