@@ -1,4 +1,4 @@
-# ArrayBuffer.prototype.slice <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
+# TypedArray.prototype.slice <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
 
 [![github actions][actions-image]][actions-url]
 [![coverage][codecov-image]][codecov-url]
@@ -7,9 +7,9 @@
 
 [![npm badge][npm-badge-png]][package-url]
 
-An ES spec-compliant `ArrayBuffer.prototype.slice` shim. Invoke its "shim" method to shim ArrayBuffer.prototype.slice if it is unavailable.
+An ES spec-compliant `TypedArray.prototype.slice` shim. Invoke its "shim" method to shim TypedArray.prototype.slice if it is unavailable.
 
-This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES5-supported environment and complies with the [spec](https://tc39.es/ecma262/#sec-arraybuffer.prototype.slice).
+This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES5-supported environment and complies with the [spec](https://tc39.es/ecma262/#sec-%typedarray%.prototype.slice).
 
 Most common usage:
 ```js
@@ -27,7 +27,7 @@ assert.deepEqual(arr, new Uint8Array([1, 2, 3]));
 assert.deepEqual(arr2, new Uint8Array([2, 3, 3]));
 assert.notEqual(arr.buffer, arr2.buffer);
 
-if (!ArrayBuffer.prototype.transfer) {
+if (!Uint8Array.prototype.slice) {
 	slice.shim();
 }
 
@@ -48,18 +48,18 @@ assert.notEqual(arr.buffer, arr3.buffer);
 ## Tests
 Simply clone the repo, `npm install`, and run `npm test`
 
-[package-url]: https://npmjs.org/package/arraybuffer.prototype.slice
-[npm-version-svg]: https://versionbadg.es/es-shims/ArrayBuffer.prototype.slice.svg
-[deps-svg]: https://david-dm.org/es-shims/ArrayBuffer.prototype.slice.svg
-[deps-url]: https://david-dm.org/es-shims/ArrayBuffer.prototype.slice
-[dev-deps-svg]: https://david-dm.org/es-shims/ArrayBuffer.prototype.slice/dev-status.svg
-[dev-deps-url]: https://david-dm.org/es-shims/ArrayBuffer.prototype.slice#info=devDependencies
-[npm-badge-png]: https://nodei.co/npm/arraybuffer.prototype.slice.png?downloads=true&stars=true
-[license-image]: https://img.shields.io/npm/l/arraybuffer.prototype.slice.svg
+[package-url]: https://npmjs.org/package/typedarray.prototype.slice
+[npm-version-svg]: https://versionbadg.es/es-shims/TypedArray.prototype.slice.svg
+[deps-svg]: https://david-dm.org/es-shims/TypedArray.prototype.slice.svg
+[deps-url]: https://david-dm.org/es-shims/TypedArray.prototype.slice
+[dev-deps-svg]: https://david-dm.org/es-shims/TypedArray.prototype.slice/dev-status.svg
+[dev-deps-url]: https://david-dm.org/es-shims/TypedArray.prototype.slice#info=devDependencies
+[npm-badge-png]: https://nodei.co/npm/typedarray.prototype.slice.png?downloads=true&stars=true
+[license-image]: https://img.shields.io/npm/l/typedarray.prototype.slice.svg
 [license-url]: LICENSE
-[downloads-image]: https://img.shields.io/npm/dm/arraybuffer.prototype.slice.svg
-[downloads-url]: https://npm-stat.com/charts.html?package=arraybuffer.prototype.slice
-[codecov-image]: https://codecov.io/gh/es-shims/ArrayBuffer.prototype.slice/branch/main/graphs/badge.svg
-[codecov-url]: https://app.codecov.io/gh/es-shims/ArrayBuffer.prototype.slice/
-[actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/es-shims/ArrayBuffer.prototype.slice
-[actions-url]: https://github.com/es-shims/ArrayBuffer.prototype.slice/actions
+[downloads-image]: https://img.shields.io/npm/dm/typedarray.prototype.slice.svg
+[downloads-url]: https://npm-stat.com/charts.html?package=typedarray.prototype.slice
+[codecov-image]: https://codecov.io/gh/es-shims/TypedArray.prototype.slice/branch/main/graphs/badge.svg
+[codecov-url]: https://app.codecov.io/gh/es-shims/TypedArray.prototype.slice/
+[actions-image]: https://img.shields.io/endpoint?url=https://github-actions-badge-u3jn4tfpocch.runkit.sh/es-shims/TypedArray.prototype.slice
+[actions-url]: https://github.com/es-shims/TypedArray.prototype.slice/actions
