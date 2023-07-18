@@ -40,6 +40,11 @@ assert.deepEqual(arr3, new Uint8Array([2, 3, 3]));
 assert.notEqual(arr.buffer, arr3.buffer);
 ```
 
+## Engines where this is needed
+
+	- node v0.11.4 - v4: no prototype or own `slice` method
+	- node < v0.11.3: own `slice` method that fails to clone the underlying buffer
+
 ## Tests
 Simply clone the repo, `npm install`, and run `npm test`
 
