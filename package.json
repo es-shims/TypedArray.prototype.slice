@@ -55,6 +55,7 @@
 	"dependencies": {
 		"call-bind": "^1.0.2",
 		"define-properties": "^1.2.0",
+		"es-abstract": "^1.22.1",
 		"get-intrinsic": "^1.2.1",
 		"typed-array-buffer": "^1.0.0",
 		"typed-array-byte-offset": "^1.0.0"
@@ -66,7 +67,6 @@
 		"auto-changelog": "^2.4.0",
 		"available-typed-arrays": "^1.0.5",
 		"eclint": "^2.8.1",
-		"es-abstract": "^1.22.1",
 		"es-value-fixtures": "^1.4.2",
 		"eslint": "=8.8.0",
 		"evalmd": "^0.0.19",
