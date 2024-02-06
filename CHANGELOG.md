@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.2](https://github.com/es-shims/TypedArray.prototype.slice/compare/v1.0.1...v1.0.2) - 2024-02-06
+
+### Commits
+
+- [Dev Deps] update `aud`, `anvailable-typed-arrays`, `npmignore`, `object-inspect`, `tape` [`9334d4e`](https://github.com/es-shims/TypedArray.prototype.slice/commit/9334d4e47106747bdf08072c362352b189fa7778)
+- [Deps] update `call-bind`, `define-properties`, `es-abstract`, `get-intrinsic` [`0acd649`](https://github.com/es-shims/TypedArray.prototype.slice/commit/0acd649f03baf849a88e27cd0dcfd78c400a5cb3)
+- [Refactor] use `es-errors`, so things that only need those do not need `get-intrinsic` [`70215ad`](https://github.com/es-shims/TypedArray.prototype.slice/commit/70215adca0d4b948a9945cc7d5c0a7a70fbac2a8)
+
 ## [v1.0.1](https://github.com/es-shims/TypedArray.prototype.slice/compare/v1.0.0...v1.0.1) - 2023-07-18
 
 ### Commits
