@@ -53,10 +53,10 @@
 		"es-shim API"
 	],
 	"dependencies": {
-		"call-bind": "^1.0.2",
-		"define-properties": "^1.2.0",
-		"es-abstract": "^1.22.1",
-		"get-intrinsic": "^1.2.1",
+		"call-bind": "^1.0.6",
+		"define-properties": "^1.2.1",
+		"es-abstract": "^1.22.3",
+		"get-intrinsic": "^1.2.4",
 		"typed-array-buffer": "^1.0.0",
 		"typed-array-byte-offset": "^1.0.0"
 	},
