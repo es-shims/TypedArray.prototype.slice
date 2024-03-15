@@ -2,19 +2,19 @@
 
 var $TypeError = require('es-errors/type');
 
-var Get = require('es-abstract/2023/Get');
-var GetValueFromBuffer = require('es-abstract/2023/GetValueFromBuffer');
-var IsDetachedBuffer = require('es-abstract/2023/IsDetachedBuffer');
-var max = require('es-abstract/2023/max');
-var min = require('es-abstract/2023/min');
-var Set = require('es-abstract/2023/Set');
-var SetValueInBuffer = require('es-abstract/2023/SetValueInBuffer');
-var ToIntegerOrInfinity = require('es-abstract/2023/ToIntegerOrInfinity');
-var ToString = require('es-abstract/2023/ToString');
-var TypedArrayElementSize = require('es-abstract/2023/TypedArrayElementSize');
-var TypedArrayElementType = require('es-abstract/2023/TypedArrayElementType');
-var TypedArraySpeciesCreate = require('es-abstract/2023/TypedArraySpeciesCreate');
-var ValidateTypedArray = require('es-abstract/2023/ValidateTypedArray');
+var Get = require('es-abstract/2024/Get');
+var GetValueFromBuffer = require('es-abstract/2024/GetValueFromBuffer');
+var IsDetachedBuffer = require('es-abstract/2024/IsDetachedBuffer');
+var max = require('es-abstract/2024/max');
+var min = require('es-abstract/2024/min');
+var Set = require('es-abstract/2024/Set');
+var SetValueInBuffer = require('es-abstract/2024/SetValueInBuffer');
+var ToIntegerOrInfinity = require('es-abstract/2024/ToIntegerOrInfinity');
+var ToString = require('es-abstract/2024/ToString');
+var TypedArrayElementSize = require('es-abstract/2024/TypedArrayElementSize');
+var TypedArrayElementType = require('es-abstract/2024/TypedArrayElementType');
+var TypedArraySpeciesCreate = require('es-abstract/2024/TypedArraySpeciesCreate');
+var ValidateTypedArray = require('es-abstract/2024/ValidateTypedArray');
 
 var typedArrayBuffer = require('typed-array-buffer');
 var typedArrayByteOffset = require('typed-array-byte-offset');
@@ -24,7 +24,7 @@ var typedArrayByteOffset = require('typed-array-byte-offset');
 module.exports = function slice(start, end) {
 	var O = this; // step 1
 
-	ValidateTypedArray(O); // step 2
+	ValidateTypedArray(O, 'SEQ-CST'); // step 2
 
 	// 3. Let len be O.[[ArrayLength]].
 	var len = O.length; // steps 3
@@ -71,8 +71,8 @@ module.exports = function slice(start, end) {
 			var targetByteIndex = typedArrayByteOffset(A); // step 14.d.vii
 			var limit = targetByteIndex + (count * elementSize); // step 14.d.viii
 			while (targetByteIndex < limit) { // step 14.d.ix
-				var value = GetValueFromBuffer(srcBuffer, srcByteIndex, 'Uint8', true, 'Unordered'); // step 14.d.ix.1
-				SetValueInBuffer(targetBuffer, targetByteIndex, 'Uint8', value, true, 'Unordered'); // step 14.d.ix.2
+				var value = GetValueFromBuffer(srcBuffer, srcByteIndex, 'UINT8', true, 'UNORDERED'); // step 14.d.ix.1
+				SetValueInBuffer(targetBuffer, targetByteIndex, 'UINT8', value, true, 'UNORDERED'); // step 14.d.ix.2
 				srcByteIndex += 1; // step 14.d.ix.3
 				targetByteIndex += 1; // step 14.d.ix.4
 			}
