@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.3](https://github.com/es-shims/TypedArray.prototype.slice/compare/v1.0.2...v1.0.3) - 2024-03-15
+
+### Commits
+
+- [Deps] update `es-abstract` [`9067824`](https://github.com/es-shims/TypedArray.prototype.slice/commit/906782435b34ec0ce54a9dd613974601e08b5c2e)
+- [Deps] update `call-bind`, `typed-array-buffer`, `typed-array-byte-offset` [`33da086`](https://github.com/es-shims/TypedArray.prototype.slice/commit/33da086e39deedf551abd8398fdf5d189cbe3d77)
+- [Dev Deps] update `available-typed-arrays`, `tape` [`2f8d038`](https://github.com/es-shims/TypedArray.prototype.slice/commit/2f8d038eb15b8ac3206c2368036b988b01e5c417)
+
 ## [v1.0.2](https://github.com/es-shims/TypedArray.prototype.slice/compare/v1.0.1...v1.0.2) - 2024-02-06
 
 ### Commits
