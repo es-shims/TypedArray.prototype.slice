@@ -1,6 +1,6 @@
 {
 	"name": "typedarray.prototype.slice",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "ES spec-compliant shim for TypedArray.prototype.slice",
 	"author": "Jordan Harband <ljharb@gmail.com>",
 	"funding": {
