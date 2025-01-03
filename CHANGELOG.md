@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.5](https://github.com/es-shims/TypedArray.prototype.slice/compare/v1.0.4...v1.0.5) - 2025-01-02
+
+### Commits
+
+- [Fix] (－‸ლ) typo in specifier from dd67051195bdc0a9a5a2252c0fd3bd9155f6b08b [`cffa05e`](https://github.com/es-shims/TypedArray.prototype.slice/commit/cffa05e88cb2c3044f367ba9541f2894f51c99d0)
+
 ## [v1.0.4](https://github.com/es-shims/TypedArray.prototype.slice/compare/v1.0.3...v1.0.4) - 2025-01-02
 
 ### Commits
