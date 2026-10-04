@@ -4,6 +4,7 @@ var inspect = require('object-inspect');
 // var IsDetachedBuffer = require('es-abstract/2023/IsDetachedBuffer');
 
 var forEach = require('for-each');
+var isTypedArray = require('is-typed-array');
 var availableTypedArrays = require('available-typed-arrays')();
 var v = require('es-value-fixtures');
 
@@ -40,10 +41,28 @@ module.exports = function runTests(slice, t) {
 				);
 				s2t.notEqual(copy.buffer, ta.buffer, 'the new instance has a different buffer than the original when sliced with a start index');
 
+				var withConstructor = new TA(isBigInt ? [BigInt(1), BigInt(2), BigInt(3)] : [1, 2, 3]);
+				withConstructor.constructor = function () {
+					throw new EvalError('a `constructor` without `Symbol.species` should not be called');
+				};
+				var fromDefault = slice(withConstructor);
+				s2t.ok(fromDefault instanceof TA, 'a `constructor` without `Symbol.species` uses the default constructor');
+				s2t.deepEqual(fromDefault, ta, 'a `constructor` without `Symbol.species` keeps the values');
+
 				s2t.end();
 			});
 		});
 
 		return st.end();
+	});
+
+	var buffer = typeof Buffer === 'function' && (Buffer.from ? Buffer.from([1, 2, 3]) : new Buffer([1, 2, 3]));
+	t.test('Buffer', { skip: !isTypedArray(buffer) }, function (st) {
+
+		var copy = slice(buffer);
+		st.notEqual(copy, buffer, 'returns a new instance');
+		st.deepEqual(Array.prototype.slice.call(copy), [1, 2, 3], 'returns a new instance with the same values');
+
+		st.end();
 	});
 };
