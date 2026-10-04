@@ -2,19 +2,19 @@
 
 var $TypeError = require('es-errors/type');
 
-var Get = require('es-abstract/2024/Get');
-var GetValueFromBuffer = require('es-abstract/2024/GetValueFromBuffer');
-var IsDetachedBuffer = require('es-abstract/2024/IsDetachedBuffer');
+var Get = require('es-abstract/2025/Get');
+var GetValueFromBuffer = require('es-abstract/2025/GetValueFromBuffer');
+var IsDetachedBuffer = require('es-abstract/2025/IsDetachedBuffer');
 var max = require('math-intrinsics/max');
 var min = require('math-intrinsics/min');
-var Set = require('es-abstract/2024/Set');
-var SetValueInBuffer = require('es-abstract/2024/SetValueInBuffer');
-var ToIntegerOrInfinity = require('es-abstract/2024/ToIntegerOrInfinity');
-var ToString = require('es-abstract/2024/ToString');
-var TypedArrayElementSize = require('es-abstract/2024/TypedArrayElementSize');
-var TypedArrayElementType = require('es-abstract/2024/TypedArrayElementType');
-var TypedArraySpeciesCreate = require('es-abstract/2024/TypedArraySpeciesCreate');
-var ValidateTypedArray = require('es-abstract/2024/ValidateTypedArray');
+var Set = require('es-abstract/2025/Set');
+var SetValueInBuffer = require('es-abstract/2025/SetValueInBuffer');
+var ToIntegerOrInfinity = require('es-abstract/2025/ToIntegerOrInfinity');
+var ToString = require('es-abstract/2025/ToString');
+var TypedArrayElementSize = require('es-abstract/2025/TypedArrayElementSize');
+var TypedArrayElementType = require('es-abstract/2025/TypedArrayElementType');
+var TypedArraySpeciesCreate = require('es-abstract/2025/TypedArraySpeciesCreate');
+var ValidateTypedArray = require('es-abstract/2025/ValidateTypedArray');
 
 var typedArrayBuffer = require('typed-array-buffer');
 var typedArrayByteOffset = require('typed-array-byte-offset');
