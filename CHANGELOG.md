@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.6](https://github.com/es-shims/TypedArray.prototype.slice/compare/v1.0.5...v1.0.6) - 2026-10-04
+
+### Commits
+
+- [Fix] `getPolyfill`: use the implementation where the native method throws for a non-Typed-Array `constructor` [`b848109`](https://github.com/es-shims/TypedArray.prototype.slice/commit/b84810985071b8737e32f3d61f5585b17f8ecb0c)
+- [Deps] update `call-bind`, `es-abstract`, `typed-array-byte-offset` [`74761c7`](https://github.com/es-shims/TypedArray.prototype.slice/commit/74761c7ed1304a8f9826b295a3703791ee32759e)
+- [Dev Deps] update `@ljharb/eslint-config`, `auto-changelog`, `eslint`, `evalmd`, `npmignore`, `tape` [`502413b`](https://github.com/es-shims/TypedArray.prototype.slice/commit/502413b0242b59ed482b7645ddfcb204f43306da)
+- [Dev Deps] update `es-value-fixtures`, `for-each`, `has-strict-mode`, `object-inspect` [`bd0da39`](https://github.com/es-shims/TypedArray.prototype.slice/commit/bd0da39ed1d61409f3a8064fd92b9080cd3a8761)
+- [actions] update workflows [`00c4591`](https://github.com/es-shims/TypedArray.prototype.slice/commit/00c4591e3fe7c8d1c74c281cc6f5bd3b5aad997d)
+- [Dev Deps] update `auto-changelog`; remove `encoding` [`52fb2a2`](https://github.com/es-shims/TypedArray.prototype.slice/commit/52fb2a2f60d9da64dec341d77324c233ccfde1ff)
+- [actions] set least-privilege `cache-mode` [`e9898b4`](https://github.com/es-shims/TypedArray.prototype.slice/commit/e9898b417a388cfbc29c0cee5f6d3831a630a4eb)
+
 ## [v1.0.5](https://github.com/es-shims/TypedArray.prototype.slice/compare/v1.0.4...v1.0.5) - 2025-01-02
 
 ### Commits
